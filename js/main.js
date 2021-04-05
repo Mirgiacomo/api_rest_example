@@ -21,8 +21,9 @@
     data: "dominio=" + dominio + "&mailchimp_api_key=" + mailchimp_api_key + "&username=" + username + "&password=" + password,
     })
     .done(function (response) {
-        
         if(response.success){
+        alert(response);
+
             document.getElementById("error").style.display= 'none';
             document.getElementById("license_number").style.display= '';
             document.getElementById('license_number').textContent = "LICENZA NUMERO : " + response.success;
@@ -34,6 +35,7 @@
         }
     })
     .fail(function (jqXHR) {
+        alert(jqXHR);
         document.getElementById('error').textContent = "ERRORE : " + jqXHR;
     });
     e.preventDefault();
