@@ -1,4 +1,4 @@
 Header set Access-Control-Allow-Origin "*"
-
 RewriteEngine on
-RewriteRule ^api/license/?$ api/controlloLicenza.php
+RewriteRule ^license/activate?$ license/attivazioneLicenza.php
+RewriteRule ^license/check?$ license/controlloLicenza.php
